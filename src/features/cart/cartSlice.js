@@ -3,8 +3,8 @@ import cartItems from "../../cartItems";
 import CartItems from '../../cartItems';
 
 const initialState = {
-    // cartItems : cartItems
-    cartItems : [],
+    cartItems : cartItems,
+    // cartItems : [],
     total : 0,
     amount : 4,
     isLoading : true
@@ -52,8 +52,9 @@ const cartSlice = createSlice({
             let total = 0;
             state.cartItems.forEach( (item) => {
                 amount += item.amount;
-                total = item.amount * item.price;
+                total += item.amount * item.price;
             });
+            console.log(state.total);
             state.amount = amount;
             state.total = total;
         }

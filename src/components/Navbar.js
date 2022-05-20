@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <nav>
         <div className='nav-center'>
-            <h3>redux toolkit</h3>
+            <h3>Store Shop</h3>
             <div className='nav-container'>
                 <CartIcon />
                 <div className='amount-container'>
